@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.so.debug.2121466518/LIBDIR/delimiter=\:
+environment/project/cdt.managedbuild.config.gnu.so.debug.2121466518/LIBDIR/operation=append
+environment/project/cdt.managedbuild.config.gnu.so.debug.2121466518/LIBDIR/value=${SRCROOT}/${ConfigName}/lib
+environment/project/cdt.managedbuild.config.gnu.so.debug.2121466518/SRCROOT/delimiter=\:
+environment/project/cdt.managedbuild.config.gnu.so.debug.2121466518/SRCROOT/operation=append
+environment/project/cdt.managedbuild.config.gnu.so.debug.2121466518/SRCROOT/value=../../../..
+environment/project/cdt.managedbuild.config.gnu.so.debug.2121466518/append=true
+environment/project/cdt.managedbuild.config.gnu.so.debug.2121466518/appendContributed=true
+environment/project/cdt.managedbuild.config.gnu.so.release.1116900849/LIBDIR/delimiter=\:
+environment/project/cdt.managedbuild.config.gnu.so.release.1116900849/LIBDIR/operation=append
+environment/project/cdt.managedbuild.config.gnu.so.release.1116900849/LIBDIR/value=${SRCROOT}/${ConfigName}/lib
+environment/project/cdt.managedbuild.config.gnu.so.release.1116900849/SRCROOT/delimiter=\:
+environment/project/cdt.managedbuild.config.gnu.so.release.1116900849/SRCROOT/operation=append
+environment/project/cdt.managedbuild.config.gnu.so.release.1116900849/SRCROOT/value=../../../..
+environment/project/cdt.managedbuild.config.gnu.so.release.1116900849/append=true
+environment/project/cdt.managedbuild.config.gnu.so.release.1116900849/appendContributed=true

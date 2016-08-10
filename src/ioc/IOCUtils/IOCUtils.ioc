@@ -1,0 +1,87 @@
+UtilsLib = Library( Concat(CurrentDir(), "libIOCUtils.so" ) );
+
+
+! Shared objects below enable sharing string and similar objects between classes
+! where one will write to them and the other will be able to read them.
+
+SharedString = Class( UtilsLib, "g_SharedString" );
+SharedVecChar = Class( UtilsLib, "g_SharedVecChar" );
+SharedVecDbl = Class( UtilsLib, "g_SharedVecDbl" );
+SharedVecInt = Class( UtilsLib, "g_SharedVecInt" );
+SharedVecStr = Class( UtilsLib, "g_SharedVecStr" );
+SharedVecUChar = Class( UtilsLib, "g_SharedVecUChar" );
+SharedVecUInt = Class( UtilsLib, "g_SharedVecUInt" );
+SharedVecWChar = Class( UtilsLib, "g_SharedVecWChar" );
+SharedVecWStr = Class( UtilsLib, "g_SharedVecWStr" );
+SharedWString = Class( UtilsLib, "g_SharedWString" );
+
+!Output types
+
+ConsoleError = Class( UtilsLib, "g_ConsoleError" );
+! implements Output
+
+ConsoleOutput = Class( UtilsLib, "g_ConsoleOutput" );
+! implements Output
+
+FileOutput = Class( UtilsLib, "g_FileOutput" );
+! ( String filepath, bool toAppend )
+! implements Output
+
+StringOutput = Class( UtilsLib, "g_StringOutput" );
+! ( SharedString )
+! implements Output
+
+MTOutput = Class( UtilsLib, "g_MTOutput" );
+! (Output)
+! takes Output as parameter and doesn't implement it
+
+WConsoleError = Class( UtilsLib, "g_WConsoleError" );
+! implements Output
+
+WConsoleOutput = Class( UtilsLib, "g_WConsoleOutput" );
+! implements Output
+
+WFileOutput = Class( UtilsLib, "g_WFileOutput" );
+! ( String filepath, bool toAppend )
+! implements Output
+
+WStringOutput = Class( UtilsLib, "g_StringOutput" );
+! ( SharedWString )
+! implements Output
+
+MTWOutput = Class( UtilLib, "g_MTWOutput" );
+! (WOutput)
+! Does not implement Output, takes it as parameter, thread-safe to write to if you lock it.
+
+! Test classes
+
+TestSuite = Class( UtilsLib, "g_testSuite" );
+! ( String id, String desc, Test::Reporter, List(Test::Case) )
+! implement Runnable
+
+TestSuiteWithLogging = Class( UtilsLib, "g_testSuiteWithLogging" );
+! ( LoggerSubscriber, String id, String desc, Test::Reporter, List(Test::Case) )
+! implement Runnable
+
+TestBasicReporter = Class( UtilsLib, "g_testBasicReporter" );
+! (Output, bool verbose)
+! implements Test::Reporter
+
+FileBasedIntVector = Class( UtilsLib, "g_FileBasedIntVector" );
+FileBasedStringVector = Class( UtilsLib, "g_FileBasedStringVector" );
+FileBasedIntSet = Class( UtilsLib, "g_FileBasedIntSet" );
+FileBasedStringSet = Class( UtilsLib, "g_FileBasedStringSet" );
+! Above 4 implement Proxy of collection of their type (set or vector) to int or string
+! (String filepath)
+FileBasedListOfIntVector = Class( UtilsLib, "g_FileBasedIntVector" );
+FileBasedListOfStringVector = Class( UtilsLib, "g_FileBasedStringVector" );
+FileBasedListOfIntSet = Class( UtilsLib, "g_FileBasedIntSet" );
+FileBasedListOfStringSet = Class( UtilsLib, "g_FileBasedStringSet" );
+! Above 4 implement Proxy of std::vector of the type as above
+! (String filepath)
+
+
+OutputLogger = Class( UtilsLib, "g_OutputLogger" );
+! ( Output, UInt subjects ) subjects=1 for debug only, 255 for everything
+
+Loggers = Class( UtilsLib, "g_LoggerSubscriber" );

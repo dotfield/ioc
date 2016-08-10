@@ -1,0 +1,7 @@
+*.o
+*.d
+*.so
+IOCApp
+*.project
+*.cproject
+
